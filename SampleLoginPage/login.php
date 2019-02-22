@@ -16,15 +16,30 @@ require 'dbconfig/config.php';
 			<img src="images/loginpic.jpg" class="avatar1"/>
 		</center>
 	
-	<form class="myform" action="login.php" method="post">
+	<form class="myform" action="login.php" method="post" name="loginForm">
 		<label><font face="Comic Sans MS">Username:</font></label><br>
 		<input name="username" type="text" class="inputvalues" placeholder="Username" required/><br><br>
 		<label><font face="Comic Sans MS">Password:</font></label><br>
 		<input name="password" type="password" class="inputvalues" placeholder="Password" required/><br>
-		<center><br><input name="login" type="submit" id="login_btn" value="Login"/><br>
+		<center><br><input type="submit" name="login" id="login_btn" value="Login" onclick="myFunction(document.loginForm.username)" /><br>
 		<a href="register.php" style="text-decoration:none"><input type="button" id="register_btn" value="Register"/><a/><br></center>
 	</form>
-	
+        <script>
+            function myFunction(x) {
+                // If x is not an alphabet or number
+                var letters = /^[A-Za-z0-9]+$/;
+                if(x.value.match(letters))
+                {
+                    alert('Your name has been accepted');
+                    return true;
+                }
+                else
+                {
+                    alert('Please input alphabet and numeric characters only');
+                    return false;
+                }
+            }
+        </script>
 	<?php
 		if(isset($_POST['login']))
 		{
@@ -45,6 +60,5 @@ require 'dbconfig/config.php';
 		}
 	?>
 	</div>
-
 </body>
 </html>
