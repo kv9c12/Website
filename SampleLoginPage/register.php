@@ -41,7 +41,7 @@
             }
         </script>
 	<?php
-	$val = $_POST['username'];
+			$val = $_POST['username'];
 			if(isset($_POST['submit_btn']) && $val!=" ")
 			{
 				$username=$_POST['username'];
