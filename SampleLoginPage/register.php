@@ -21,27 +21,28 @@
 		<input name="password" type="password" class="inputvalues" placeholder="Enter Password" required/><br><br>
 		<label>Confirm Password:</label><br>
 		<input name="cpassword" type="password" class="inputvalues" placeholder="Confirm Password" required/><br>
-		<center><input name="submit_btn" type="submit" id="signup_btn" value="Sign Up" onclick="myFunction(document.loginForm.username)"/>
+		<center><input name="submit_btn" type="submit" id="signup_btn" value="Sign Up" onclick="myFunction(document.loginForm.password,document.loginForm.username)"/>
 		<a href="login.php" style="text-decoration:none"><input type="button" id="back_btn" value="<< Back"/><br>
 	</form>
         <script>
-            function myFunction(x) {
+            function myFunction(x,y) {
                 // If x is not an alphabet or number
-                var letters = /^[A-Za-z0-9]+$/;
+                var letters = /^[A-Za-z0-9]{8,15}$/;
                 if(x.value.match(letters))
                 {
-                    alert('Your name has been accepted');
                     return true;
                 }
                 else
                 {
-                    alert('Please input alphabet and numeric characters only');
+                	y.value=" ";
+                    alert('Please input alpha-numeric characters of atleast 8 character length');
                     return false;
                 }
             }
         </script>
 	<?php
-			if(isset($_POST['submit_btn']))
+	$val = $_POST['username'];
+			if(isset($_POST['submit_btn']) && $val!=" ")
 			{
 				$username=$_POST['username'];
 				$password=$_POST['password'];
@@ -49,7 +50,7 @@
 				
 				if($password==$cpassword)
 				{
-					$query = "select * from userinfotable where username='$username'";
+					$query = "select * from users where username='$username'";
 					//echo $query;
 				$query_run = mysqli_query($con,$query);
 				//echo mysql_num_rows($query_run);
@@ -61,7 +62,7 @@
 						}
 						else
 						{
-							$query = "insert into userinfotable values('$username','$password')";
+							$query = "insert into users values('$username','$password')";
 							$query_run= mysqli_query($con,$query);
 							if($query_run)
 							{

@@ -54,7 +54,7 @@ input[type=submit]:hover {
 <u><h3 style="text-align: center;">Feedback-Form</h3></u>
 
 <div class="container">
-  <form action=""><!--provide next form url-->
+  <form action="login.php"><!--provide next form url-->
     <label for="fname" id="field">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="First name..">
 
