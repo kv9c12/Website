@@ -39,7 +39,7 @@ require 'dbconfig/config.php';
                 }
                 else
                 {
-                	x.value=" ";
+                	x.value=" ";	
                     alert('Please input alphabet and numeric characters only');
                     return false;
                 }
