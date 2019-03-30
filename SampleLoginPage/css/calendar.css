@@ -1,0 +1,35 @@
+.monthPre{
+ color: white;
+ text-align: center;
+}
+.monthNow{
+ color: #FFFFFF;
+ text-align: center;
+}
+.dayNow{
+ color: #FFFFFF;
+ text-align: center;
+}
+.calendar td{
+padding: 3%; 
+}
+.monthNow th{
+ color: #FFFFFF;
+ text-align: center;
+ font-size: 2vw;
+ padding: 3%;
+}
+.dayNames{
+ color: #FFFFFF;
+ text-align: center;
+ padding: 3%;
+}
+.calendar{
+  border-collapse: collapse;
+  background-color: #03A9F4;
+  border-radius: 5px;
+  width: 25%;
+  height: 50%;
+  font-family: Comic Sans MS;
+  font-size: 1.2vw;
+}
