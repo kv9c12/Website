@@ -1,5 +1,6 @@
 <?php
 	require 'dbconfig/config.php';
+	error_reporting(E_ALL ^ E_NOTICE);
 ?>
 <!DOCTYPE html>
 <html>

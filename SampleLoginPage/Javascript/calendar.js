@@ -24,12 +24,10 @@ function displayCalendar(){
     }
  }
  
- 
  // names of months and week days.
  var monthNames = ["January","February","March","April","May","June","July","August","September","October","November", "December"];
  var dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday", "Saturday"];
  var dayPerMonth = ["31", ""+FebNumberOfDays+"","31","30","31","30","31","31","30","31","30","31"]
- 
  
  // days in previous month and next one , and day of week.
  var nextDate = new Date(nextMonth +' 1 ,'+year);
@@ -37,9 +35,6 @@ function displayCalendar(){
  var weekdays2 = weekdays
  var numOfDays = dayPerMonth[month];
      
- 
- 
- 
  // this leave a white space for days of pervious month.
  while (weekdays>0){
     htmlContent += "<td class='monthPre'></td>";
@@ -56,9 +51,6 @@ function displayCalendar(){
         weekdays2 = 0;
         htmlContent += "</tr><tr>";
     }
- 
- 
- 
    // if counter is current day.
     // highlight current day using the CSS defined in header.
     if (counter == day){
@@ -70,9 +62,7 @@ function displayCalendar(){
     weekdays2++;
     counter++;
  }
- 
- 
- 
+
  // building the calendar html body.
  var calendarBody = "<table class='calendar'> <tr class='monthNow'><th colspan='7'>"
  + "< &nbsp"+monthNames[month]+" "+ year +"  >"+"</th></tr>";

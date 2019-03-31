@@ -105,7 +105,6 @@
 }
 
 #board{
-	background-color: white;
 	position: absolute;
 	height:80%;
 	width:83.5%;
@@ -133,12 +132,13 @@
 	width: 20vw;
 	height: 100%;
 	border-radius: 10px;
+	position: relative;
 	/*background-color: black;*/
 }
 .bulletl{
 	border-radius: 50%;
-	width: 4vw;
-	height: 4vw;
+	width: 3vw;
+	height: 3vw;
 	margin-left: 0.5vw;
 	margin-top: 0.5vw;
 	background-color: #0984ff;
@@ -146,26 +146,28 @@
 }
 .bulletr{
 	border-radius: 50%;
-	width: 4vw;
-	height: 4vw;
+	width: 3vw;
+	height: 3vw;
 	margin-top: 0.5vw;
 	margin-right: 0.5vw;
+	background-color: #0984ff;
 	float:right;
 }		
 .buttonwrapper{
 	background-color: white;
 	width: 20vw;
-	height:5vw;
+	height:4vw;
 	border-radius: 15vw;
-	margin-top: 5px;
+	margin-top: 0.5vw;
 	margin-left: 1vw;
 }
 label{
-	margin-top: 1.5vw;
+	margin-top: 1.2vw;
 	display: inline-block;
 	text-align: center;
 	word-wrap: break-word;
 	display: inline-block;
+	color: black;
 }
 .monthPre{
  color: white;
@@ -179,11 +181,10 @@ label{
  color: #03A9F4;
  text-align: center;
  background-color: #FFFFFF;
- border-radius: 50%;
-
+ border-radius: 40%;
 }
 .calendar td{
-padding: 3%; 
+padding: 3%;
 }
 .monthNow th{
  color: #FFFFFF;
@@ -196,12 +197,22 @@ padding: 3%;
  text-align: center;
 }
 .calendar{
-  border-collapse: collapse;
   background-color: #03A9F4;
   border-radius: 0px 15px 0px 0px;
   width: 100%;
   font-family: Comic Sans MS;
   font-size: 1vw;
-  margin-top: -15.6vw;
-  margin-right: -10vw;
+  position: absolute;
+  top: 0vw;
+}
+#logout{
+	background-color:#3498db;
+	padding:5px;
+	color:white;
+	width:80%;
+	text-align:center;
+	font-size:18px;
+	font-weight:bold;
+	border-radius:15px;
+	text-decoration: none;
 }

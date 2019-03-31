@@ -19,16 +19,29 @@ error_reporting(E_ALL ^ E_NOTICE);
 		</center>
 	
 	<form class="myform" action="login.php" method="post" name="loginForm">
-		<label><font face="Comic Sans MS">Username:</font></label><br>
-		<input name="username" type="text" class="inputvalues" placeholder="Username" required/><br><br>
-		<label><font face="Comic Sans MS">Password:</font></label><br>
-		<input name="password" type="password" class="inputvalues" placeholder="Password" required/><br>
-		<center><br><input type="submit" name="login" id="login_btn" value="Login"  onclick="myFunction(document.loginForm.username)" /><br></input>
+		<label><font face="Comic Sans MS">Username:</font></label>
+		<br>
+		<input name="username" type="text" class="inputvalues" placeholder="Username" value="<?php if(isset($_COOKIE["username"])) {echo $_COOKIE["username"];} ?>" required/>
+		<br>
+		<br>
+		
+		<label><font face="Comic Sans MS">Password:</font></label>
+		<br>
+		<input name="password" type="password" class="inputvalues" placeholder="Password" value="<?php if(isset($_COOKIE["password"])) {echo $_COOKIE["password"];}?>" required/>
+		<br>
+		
+		<br/>
+		<input type="checkbox" name="RememberMe" id="rem" <?php if(isset($_COOKIE["username"])) { ?> checked <?php }?>/>
+		<label>Remember me</label>
+		<p><?php if(isset($msg)) {echo $msg;} ?></p>
+		<center><input type="submit" name="login" id="login_btn" value="Login"  onclick="myFunction(document.loginForm.username)" /><br></input>
+		
 		<a href="register.php" style="text-decoration:none"><input type="button" id="register_btn" value="Register"/></a><br></input>
-		<a href="feedback.php" style="text-decoration:none"><input type="button" id="feedback_btn"
-		value="Feedback"></a>
-		<a href="contactme.php" style="text-decoration:none"><input type="button" id="contactme_btn" 
-		value="Contact Me"></a>
+		
+		<a href="feedback.php" style="text-decoration:none"><input type="button" id="feedback_btn" value="Feedback"></a>
+		
+		<a href="contactme.php" style="text-decoration:none"><input type="button" id="contactme_btn" value="Contact Me"></a>
+		
 		</center>
 	</form>
 	<script>
@@ -59,7 +72,23 @@ error_reporting(E_ALL ^ E_NOTICE);
 			if(mysqli_num_rows($query_run)>0)
 			{
 				$_SESSION['username']=$username;
-				header('location:menu/homepage.php');
+ 				if(!empty($_POST["RememberMe"]))
+ 				{
+ 				setcookie ("username", $_POST["username"], time() + (10 * 365 * 24 * 60 * 60));
+ 				setcookie ("password", $_POST["password"], time() + (10 * 365 * 24 * 60 * 60));
+ 				}
+ 				else
+ 				{
+ 				if(isset($_COOKIE["username"]))
+ 				{
+ 				setcookie ("username", "");
+ 				}
+ 				if(isset($_COOKIE["password"]))
+ 				{
+ 				setcookie ("password", "");
+ 				}
+ 				}
+ 				header('location:menu/homepage.php');
 			}
 			else
 			{

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Accounts</title>
+	<title>Tracking</title>
 <link rel="stylesheet" href="../css/webpage.css">
 </head>
-<body style="background-image: url('../images/back.jpg');background-size: cover;">		
-	<img id="logo" src="../images/logo.jpg">
-	<div id="title"><center style="margin-left: 10%"> Inventory Management System </center></div>
+<body style="background-image: url('../images/back.jpg');background-size: cover;">	
+	<a href="aboutus.php"><img id="logo" src="../images/logo.png"></a>
+	<div id="title"><center style="margin-left: 10%;"> KGS Courier Services </center></div>
 	<div id="menu">
-		<a href="homepage.php"><li style="margin-top: 2vw;"><p>Dashboard</p></li></a>
-		<a href="shpctrl.php"><li><p>Shopping Central</p></li></a>
-		<a href="bskt.php"><li><p>Basket</p></li></a>
-		<a href="pror.php"><li><p>Purchase Orders</p></li></a>
-		<a href="bills.php"><li><p>Bills</p></li></a>
-		<a href="prhis.php"><li><p>Purchase History</p></li></a>
-		<a href="acc.php"><li><p>Manage Account</p></li></a>
+		<a href="homepage.php"><li style="margin-top: 10%;"><p>Dashboard</p></li></a>
+		<a href="order.php" ><li><p>Place Order</p></li></a>
+		<a href="track.php"><li><p>Track</p></li></a>
+		<a href="request.php"><li><p>Service Providers</p></li></a>
+		<a href="payment.php"><li><p>Payment</p></li></a>
+		<a href="history.php"><li><p>Service History</p></li></a>
+		<a href="account.php"><li><p>Manage Account</p></li></a>
 	</div>
 </body>
 </html>
