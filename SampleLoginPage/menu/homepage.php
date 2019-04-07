@@ -53,17 +53,17 @@
 				</th>
 				<th id="th3">
 					<div id="calendar"></div>
-					<div style="position: absolute;bottom:1vw">TIME watch here<br>hello<br><br></div>
+					<div style="position: absolute;bottom:1vw"><!--TIME watch here--><br><!--hello--><br><br></div>
 				</th>
 		</table>
 	</div>
 	<div id="menu">
 		<a href="homepage.php"><li style="margin-top: 10%;"><p>Dashboard</p></li></a>
 		<a href="order.php" ><li><p>Place Order</p></li></a>
-		<a href="track.php"><li><p>Track</p></li></a>
+		<!--<a href="track.php"><li><p>Track</p></li></a>-->
 		<a href="request.php"><li><p>Service Providers</p></li></a>
-		<a href="payment.php"><li><p>Payment</p></li></a>
-		<a href="history.php"><li><p>Service History</p></li></a>
+		<!--<a href="payment.php"><li><p>Payment</p></li></a>-->
+		<!--<a href="history.php"><li><p>Service History</p></li></a>-->
 		<a href="account.php"><li><p>Manage Account</p></li></a>
 	</div>
 </body>
