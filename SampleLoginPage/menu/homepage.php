@@ -18,7 +18,7 @@
 							<label style="margin-top: 12px">I</label>
 						</div>
 						<label>
-						user
+						Arpit123
 						</label>
 						</div>
 						<div class="buttonwrapper">
@@ -26,7 +26,7 @@
 							<label style="margin-top: 12px">N</label>
 						</div>
 						<label>
-						user
+						Arpit Rao
 						</label>
 						</div>
 						<div class="buttonwrapper">
@@ -34,7 +34,7 @@
 							<label style="margin-top: 12px">P</label>
 						</div>
 						<label>
-						user
+						9123124578
 						</label>
 						</div>
 						<div class="buttonwrapper">
@@ -42,7 +42,7 @@
 							<label style="margin-top: 12px">A</label>
 						</div>
 						<label>
-						user
+						Chennai
 						</label>
 						</div>
 					<br/><a href="logout.php" style="text-decoration: none"><input id="logout" type="button" name="logout" value="LogOut" /></a>

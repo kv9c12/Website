@@ -337,7 +337,7 @@
 				$query = "insert into orders values('$sfname','$smname','$slname','$paddress1','$paddress2','$pcity','$pstate','$pcountry','$ppincode','$pickdate','$picktime','$rfname','$rmname','$rlname','$daddress1','$daddress2','$dcity','$dstate','$dcountry','$dpincode','$dropdate','$droptime','$service','$pay','$message','$largestNumber')";
 				$query_run= mysqli_query($con,$query);
 				$message = $weight*$distance;
-				echo "<script type='text/javascript'>alert('$message');</script>";
+				echo "<script type='text/javascript'>alert('Your Delivery cost is: $message');</script>";
 			}
 		?>
 </body>
